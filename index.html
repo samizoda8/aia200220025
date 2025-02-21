@@ -137,8 +137,8 @@
                                         </li>
                                         <li class="menu-item"><a href="about.html">Про Академию</a>
                                         </li>
-                                        <li class="menu-item"><a href="index.html#bootcamp">AI Bootcamp</a>
-                                        </li>
+                                        <!--<li class="menu-item"><a href="index.html#bootcamp">AI Bootcamp</a>
+                                        </li>-->
                                         <li class="menu-item"><a href="index.html#schedule">Расписание</a>
                                         </li>
                                         <li class="menu-item"><a href="index.html#testimonials">Отзывы</a>
@@ -274,7 +274,7 @@
                     </div>
                     <div class="col-xl-7 col-lg-6 col-md-8">
                         <div class="banner__images-two tg-svg" >
-                            <img  src="assets/img/banner/h2_banner_img.png"  alt="img" class="main-img">
+                            <img  src="assets/img/banner/h2_banner_img.png" alt="img" class="main-img">
                             <div class="shape big-shape" data-aos="fade-up" data-aos-delay="600">
                                 <img src="assets/img/banner/h2_banner_shape01.svg" alt="shape" class="injectable tg-motion-effects1">
                             </div>
@@ -315,36 +315,39 @@
 
 .banner-area-two .main-img {
     position: relative;
-    z-index: 2; /* Поднимаем над фигурой */
-    max-width: 100%;
+    z-index: 2;
+    width: 92%; /* Увеличиваем размер */
+    max-width: none; /* Убираем ограничение */
     height: auto;
-    transform: translateX(-10%); /* Смещение девушки влево */
+    transform: scale(1.2) translateX(-5%); /* Увеличиваем масштаб */
 }
 
-/* Адаптивность: уменьшаем и центрируем девушку */
+/* Адаптивность */
 @media (max-width: 1200px) {
     .banner-area-two .main-img {
-        transform: translateX(-10%); /* Слегка уменьшаем сдвиг */
-        width: 90%;
+        transform: scale(1.1) translateX(-5%);
+        width: 100%;
     }
 }
 
 @media (max-width: 992px) {
     .banner-area-two .main-img {
-        transform: translateX(0); /* Убираем смещение */
-        width: 80%;
+        transform: scale(1) translateX(0);
+        width: 95%;
     }
 }
 
 @media (max-width: 768px) {
     .banner-area-two .main-img {
-        width: 85%;
+        transform: scale(1);
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .banner-area-two .main-img {
-        width: 100%;
+        transform: scale(1.1);
+        width: 110%;
     }
 }
 
@@ -409,7 +412,7 @@
                         <div class="features__content-two">
                             <div class="content-top">
                                 <div class="features__icon-two">
-                                    <img src="assets/img/icons/h2_features_icon01.svg" alt="img" class="injectable">
+                                    <img src="assets/img/icons/h20.png" width="48%" alt="img" class="injectable">
                                 </div>
                                 <h2 class="title">Экспертные наставники</h2>
                             </div>
@@ -425,7 +428,7 @@
                         <div class="features__content-two">
                             <div class="content-top">
                                 <div class="features__icon-two">
-                                    <img src="assets/img/icons/h2_features_icon02.svg" alt="img" class="injectable">
+                                    <img src="assets/img/icons/h21.png" width="48%" alt="img" class="injectable">
                                 </div>
                                 <h2 class="title">Эффективные курсы</h2>
                             </div>
@@ -441,7 +444,7 @@
                         <div class="features__content-two">
                             <div class="content-top">
                                 <div class="features__icon-two">
-                                    <img src="assets/img/icons/h2_features_icon03.svg" alt="img" class="injectable">
+                                    <img src="assets/img/icons/h22.png" width="48%" alt="img" class="injectable">
                                 </div>
                                 <h2 class="title">Получите сертификат</h2>
                             </div>
@@ -477,6 +480,26 @@
                                 <div class="shape-two">
                                     <span class="svg-icon" id="faq-two-svg" data-svg-icon="assets/img/others/faq_shape02.svg"></span>
                                 </div>
+                                <style>
+
+/* Делаем контейнер с человеком и фигурой относительным */
+.faq__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+
+/* Двигаем фигуру так, чтобы она была на одном уровне с человеком */
+.shape-one {
+    position: absolute;
+    left: 30%;
+}
+
+
+                                </style>
                             </div>
                         </div>
                     </div>
@@ -1199,14 +1222,14 @@
                 </div>
                 <div class="all-courses-btn mt-30">
                     <div class="tg-button-wrap justify-content-center">
-                        <a href="courses.html" style="text-transform: none;" class="btn arrow-btn">Все курсы <img src="assets/img/icons/right_arrow.svg" alt="img" class="injectable"></a>
+                        <a href="courses.html" style="text-transform: none; margin-bottom: 5%;" class="btn arrow-btn">Все курсы <img src="assets/img/icons/right_arrow.svg" alt="img" class="injectable"></a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- course-area-end -->
 
-        <!-- work-area -->
+        <!-- work-area
         <section class="work__area section-py-120" id="bootcamp" style="margin-bottom: 150px;">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
@@ -1232,7 +1255,7 @@
                                 <div class="work__list-box">
                                     <div class="work__list-box-top">
                                         <div class="icon">
-                                            <i class="flaticon-profit"></i>
+                                            <img src="assets/img/icons/h23.png" width="48%" alt="img" class="injectable">
                                         </div>
                                         <h4 class="title">Реальные проекты</h4>
                                     </div>
@@ -1241,7 +1264,7 @@
                                 <div class="work__list-box">
                                     <div class="work__list-box-top">
                                         <div class="icon">
-                                            <i class="flaticon-mortarboard"></i>
+                                            <img src="assets/img/icons/h24.png" width="48%" alt="img" class="injectable">
                                         </div>
                                         <h4 class="title">Командная работа</h4>
                                     </div>
@@ -1270,7 +1293,7 @@
                 </div>
             </div>
         </section>
-        <!-- work-area-end -->
+         work-area-end -->
 
 
         
@@ -1756,16 +1779,16 @@
                     <div class="col-xl-3 col-md-6">
                         <div class="blog__post-item shine__animate-item">
                             <div class="blog__post-thumb">
-                                <a href="min-razvitiya-kaz.html" class="shine__animate-link"><img src="assets/img/blog/blog_post01.jpg" alt="img"></a>
+                                <a href="ddh-hackathon.html" class="shine__animate-link"><img src="assets/img/blog/blog_post01.jpg" alt="img"></a>
                             </div>
                             <div class="blog__post-content">
                                 <div class="blog__post-meta">
                                     <ul class="list-wrap">
-                                        <li><i class="flaticon-calendar"></i>04/09/2024</li>
+                                        <li><i class="flaticon-calendar"></i>29/04/2024</li>
                                         <li><i class="flaticon-user-1"></i><a href="#">AI Academy</a></li>
                                     </ul>
                                 </div>
-                                <h4 class="title"><a href="min-razvitiya-kaz.html">Министр цифрового развития Казахстана...</a></h4>
+                                <h4 class="title"><a href="ddh-hackathon.html">Завершение хакатона «Disruptive DataHack»...</a></h4>
                             </div>
                         </div>
                     </div>
@@ -1804,16 +1827,16 @@
                     <div class="col-xl-3 col-md-6">
                         <div class="blog__post-item shine__animate-item">
                             <div class="blog__post-thumb">
-                                <a href="bc-1cohort.html" class="shine__animate-link"><img src="assets/img/blog/blog_post04.jpg" alt="img"></a>
+                                <a href="aiacademy-techwomen.html" class="shine__animate-link"><img src="assets/img/blog/blog_post05.jpg" alt="img"></a>
                             </div>
                             <div class="blog__post-content">
                                 <div class="blog__post-meta">
                                     <ul class="list-wrap">
-                                        <li><i class="flaticon-calendar"></i>20/07/2024</li>
+                                        <li><i class="flaticon-calendar"></i>26/04/2024</li>
                                         <li><i class="flaticon-user-1"></i><a href="#">AI Academy</a></li>
                                     </ul>
                                 </div>
-                                <h4 class="title"><a href="bc-1cohort.html">Завершение первого потока Basic Course</a></h4>
+                                <h4 class="title"><a href="aiacademy-techwomen.html">TechWomen и Академия ИИ: Вдохновляя женщин</a></h4>
                             </div>
                         </div>
                     </div>
